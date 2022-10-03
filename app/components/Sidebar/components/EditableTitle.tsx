@@ -93,9 +93,9 @@ function EditableTitle({
           />
         </form>
       ) : (
-        <span onDoubleClick={canUpdate ? handleDoubleClick : undefined}>
+        <OneLineTitle onDoubleClick={canUpdate ? handleDoubleClick : undefined}>
           {value}
-        </span>
+        </OneLineTitle>
       )}
     </>
   );
@@ -114,6 +114,12 @@ const Input = styled.input`
   &:focus {
     outline-color: ${(props) => props.theme.primary};
   }
+`;
+
+const OneLineTitle = styled.div`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export default EditableTitle;

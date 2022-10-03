@@ -21,6 +21,20 @@ export default createGlobalStyle<Props>`
     -webkit-print-color-adjust: exact;
     --pointer: ${(props) => (props.useCursorPointer ? "pointer" : "default")};
   }
+  
+  html::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 5px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 
   body,
   button,
